@@ -1,0 +1,50 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+}
+
+[data-theme="dark"] {
+  --bg: #5136b5;
+  --fg: #f5f5f5;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, sans-serif;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#app {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  border: 2px solid var(--fg);
+  background: transparent;
+  color: var(--fg);
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+button:hover {
+  background-color: var(--fg);
+  color: var(--bg);
+}
